@@ -30,9 +30,11 @@ const divisionHandler = (event) => {
     if (dividend === '' || divider === '') {
       throw new Error('Both values are required in inputs.');
     }
+
     if (dividendValue < 0 || dividerValue <= 0) {
       throw new Error('Invalid number provided.');
     }
+
     if (isNaN(dividendValue) || isNaN(dividerValue)) {
       throw new Error('Something critical went wrong. Please reload the page');
     }
@@ -44,6 +46,7 @@ const divisionHandler = (event) => {
     } else {
       result.innerText = Math.floor(answer);
     }
+    
   } catch (error) {
     result.innerText = `Division not performed. ${error.message} Try again.`;
 
