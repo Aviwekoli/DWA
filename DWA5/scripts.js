@@ -1,3 +1,4 @@
+//@ts-check
 /**
  * The HTML form element
  * @type {HTMLFormElement}
