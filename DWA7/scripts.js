@@ -88,7 +88,7 @@ const html = {
  * This enables the user to easily search or filter books by genre.
  * @return {HTMLElement}
  */
-const genresHtmlOptions = () =>{
+const genresHtmlOptions = () => { 
     const { search : { genresSelect } } = html;
     const genreHtml = document.createDocumentFragment()
     const firstGenreElement = document.createElement('option')
