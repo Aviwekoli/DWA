@@ -1,0 +1,58 @@
+
+*{
+    box-sizing: border-box;
+  } 
+  
+  html{
+    height: 100vh;
+  }
+
+  body{
+    margin: 2rem;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    background-color: rgb(10, 4, 4);
+    color: bisque;
+  }
+  h1 {
+    align-self: center;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .buttons_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+  }
+
+  .props {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #value {
+    font-size: 150px;
+    text-align: center;
+  }
+
+  .dialog-focus {
+    color: black;
+  }
+
+  .dialog-overview {
+    color: black;
+  }
+
+  .roman {
+    font-size: 2rem;
+  }
