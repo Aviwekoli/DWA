@@ -1,7 +1,7 @@
 
 # Counter App
 
-This is simple counter app that allows the user to increment or decrement the counter by clicking on the add or minus button. The user also has the previledge to set the step amount and also reset the counter. The application also displays the counter in roman figures.
+This is simple counter app that allows the user to increment or decrement the counter by clicking on the add or minus button. The user also has the previlege to set the step amount and also reset the counter. The application also displays the counter in roman figures.
 
 ## Author
 Aviwe Koli
