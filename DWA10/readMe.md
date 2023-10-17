@@ -7,6 +7,7 @@ This is simple counter app built using shoelace web components, it allows the us
 Aviwe Koli
 
 ## Application Preview
+https://github.com/Aviwekoli/DWA/assets/131714381/f61c0e73-93f2-4df2-b660-979c4b79f923
 
 
 ## Technologies Used
@@ -19,4 +20,4 @@ Aviwe Koli
 - Use the add button to increment the counter value
 - Use the minus button to decrement the counter value
 - Use the reset button to reset the counter value to zero
-- Use the settings icon button to set the your desired counter value 
+- Use the settings icon button to set the your desired counter value
