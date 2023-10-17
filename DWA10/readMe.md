@@ -17,7 +17,7 @@ https://github.com/Aviwekoli/DWA/assets/131714381/f61c0e73-93f2-4df2-b660-979c4b
 <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="JavaScript" width="40" height="40"><br>
 
 ## Instructions
-- Use the add button to increment the counter value
-- Use the minus button to decrement the counter value
-- Use the reset button to reset the counter value to zero
-- Use the settings icon button to set the your desired counter value
+- Use the add button to increment the counter value.
+- Use the minus button to decrement the counter value.
+- Use the reset button to reset the counter value to zero.
+- Use the settings icon button to set the your desired counter value.
