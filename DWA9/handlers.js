@@ -58,7 +58,6 @@ export const renderPreview = () => {
                  * Creating instance of BookPreview
                  */
                 const BookToShow = new BookPreview(book)
-                //BookToShow.previewBook = book; 
                 fragment.appendChild(BookToShow);
             }
             list.appendChild(fragment);

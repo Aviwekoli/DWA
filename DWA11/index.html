@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally Count App</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/shoelace-autoloader.js"></script>
+    
+    <link rel="stylesheet" href="./styles.css"/>
+    <script src="./script.js" type="module" defer ></script>
+    
+</head>
+<body>
+    <h1>Counter App</h1>
+
+    <div class="container">
+         
+        <div class="props">
+            
+            <sl-dialog label="Counter App" class="dialog-overview">
+                <p>
+                    This is a simple counting application that allows the user to increment or decrement the counter
+                    value based on predefined step.<br>
+                    The app also displays the counter value in roman figures.<br>
+                    Use the add and minus button to increment or decrement the counter value.<br>
+                    Use the settings button to set your desired step value.<br>
+                    Use the reset button to reset the counter value.<br>
+                    Have fun and happy counting.
+                </p>
+                <sl-button slot="footer" variant="primary">Close</sl-button>
+            </sl-dialog>
+              
+            <sl-icon-button id="info" name="info" style="font-size: 2rem;"></sl-icon-button>
+
+            <sl-icon-button id="reset" name="arrow-clockwise" style="font-size: 1.5rem;" ></sl-icon-button>
+
+            <sl-dialog label="STEP SETTINGS" class="dialog-focus">
+                <div>
+                    
+                </div>
+                <label for="stepInput">Enter the step value for the counter:</label>
+                <input id="stepInput" type="number" min="1">
+                <sl-button slot="footer" variant="primary">APPLY</sl-button>
+            </sl-dialog>
+
+            <sl-icon-button id="reset" name="gear" style="font-size: 1.5rem;"></sl-icon-button>
+        </div>
+        
+        <span id="value">0</span>        
+        <div class="buttons_container">
+            <sl-button id="decrement" variant="default" size="large" circle>
+                <sl-icon name="dash" label="Decrease"></sl-icon>
+            </sl-button>
+            <span class="roman"></span>
+            <sl-button id="increment" variant="default" size="large" circle>
+                <sl-icon name="plus" label="Decrease"></sl-icon>
+            </sl-button>    
+        </div>
+    </div>
+
+</body>
+</html>
