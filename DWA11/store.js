@@ -1,5 +1,5 @@
 /**
- * Creates a Redux-like store for managing the application state.
+ * A Redux-like store for managing the application state.
  * @param {function} reducer - a function that takes the current state and an action, and returns a new state.
  * @param {Object} initialState - the initial state of the store.
  * @returns {Object} an object with methods to access and update the store.

@@ -12,8 +12,6 @@ import {
      handleShowMoreClick,
 } from './handlers.js';
 
- import { SettingsOverlay } from './settingsOverlay.js';
-
 /**
  * Modules from props
  * @type {Object<string>} html - an object literal that contains references to all html elements used in the app
@@ -26,7 +24,7 @@ import {
     authorsHtmlOptions,
 } from './props.js';
 
-import {books} from './data.js';
+import { books } from './data.js';
 
 // Initial Rendering of the application
 
@@ -40,7 +38,6 @@ setThemePreference().setTheme();
  * Event listeners for fire up the handlers for the full functionality of the application
  * 
  */
-
 html.main.button.addEventListener('click', handleShowMoreClick);
 
 html.main.list.addEventListener('click',() => {
@@ -77,7 +74,3 @@ html.settings.cancel.addEventListener('click', () => {
     html.settings.overlay.close();
 });
 
-// html.header.settings.addEventListener('click', () => {
-//     const customDialog = new SettingsOverlay();
-//     document.body.appendChild(customDialog);
-// });

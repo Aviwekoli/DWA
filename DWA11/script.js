@@ -52,8 +52,8 @@ const roman = document.querySelector('.roman');
 
 const dialog = document.querySelector('.dialog-focus');
 const input = dialog.querySelector('input');
-const openButton = dialog.nextElementSibling;
-const closeButton = dialog.querySelector('sl-button[slot="footer"]');
+const settingsOpenButton = dialog.nextElementSibling;
+const settingsApplyButton = dialog.querySelector('sl-button[slot="footer"]');
 
 const dialogInfo = document.querySelector('.dialog-overview');
 const openButtonInfo = dialogInfo.nextElementSibling;
@@ -92,13 +92,13 @@ const convertToRoman = (num) => {
  * A function to update the step value should a user changes the step value while using the app
  * @param {Event}
  */
-const stepSetUp = (event) => {
-    const inputStep = parseInt(stepInput.value, 10);
-    if (!isNaN(inputStep)) {
-    step = inputStep;
-    store.dispatch(actions.setStep(inputStep));
-    }
-}
+// const stepSetUp = (event) => {
+//     const inputStep = parseInt(stepInput.value, 10);
+//     if (!isNaN(inputStep)) {
+//     step = inputStep;
+//     store.dispatch(actions.setStep(inputStep));
+//     }
+// }
 
 /**
  * A function to update the HTML value displayed on the screen
@@ -112,41 +112,78 @@ const updateValue = () => {
 /**
  * Event listeners for the the application
  */
-incrementButton.addEventListener('click', (event) => {
+/**
+ * A function to update the step value should a user changes the step value while using the app
+ * @param {Event}
+ */
+const stepSetUp = (event) => {
+    const inputStep = parseInt(stepInput.value, 10);
+    if (!isNaN(inputStep)) {
+    step = inputStep;
+    store.dispatch(actions.setStep(inputStep));
+    }
+}
+
+/**
+ * A function to increment the counter value based on the step amount
+ * @param {Event}
+ */
+const increment = (event) => {
     value += step;
+    updateValue();    
+}
+
+/**
+ * A function to decrement the counter value based on the step amount
+ * @param {Event}
+ */
+const decrement = (event) => {
+    value -= step;
     updateValue();
+}
+
+/**
+ * A function to reset the counter value to zero
+ * @param {Event}
+ */
+const reset = (event) => {
+    if (value !== 0){
+        alert ('The counter has been reset!');
+    }
+    value = 0;
+    step = 1;
+    updateValue();
+}
+
+incrementButton.addEventListener('click', () => {
+    increment();
     store.dispatch(actions.increment());
 });
 
-decrementButton.addEventListener('click', (event) => {
-    value -= step;
-    updateValue();
+decrementButton.addEventListener('click', () => {
+    decrement();
     store.dispatch(actions.decrement());
 
 });
 
 resetButton.addEventListener('click', (event) => {
-    if (value !== 0){
-        alert('The Counter has been reset!');
-    }
-    value = 0;
-    updateValue(); 
+    reset();
     store.dispatch(actions.reset());
-
 });
 
-closeButton.addEventListener('click', (event) => {
+openButtonInfo.addEventListener('click', (event) => dialogInfo.show());
+
+closeButtonInfo.addEventListener('click', (event) => dialogInfo.hide());
+
+settingsOpenButton.addEventListener('click', (event) => {
+stepInput.value = '';
+dialog.show();
+});
+
+settingsApplyButton.addEventListener('click', (event) => {
     stepSetUp();
     dialog.hide();
-
 });
 
 // Initialize the UI with the current state
 store.dispatch(actions.setStep(1));
-
-openButton.addEventListener('click', (event) => {
-    stepInput.value = '';
-    dialog.show();
-    });
-openButtonInfo.addEventListener('click', (event) => dialogInfo.show());
-closeButtonInfo.addEventListener('click', (event) => dialogInfo.hide());

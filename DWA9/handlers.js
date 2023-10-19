@@ -16,7 +16,6 @@ import {
  * Module for creating the book preview instance(s)
  */
 import { BookPreview } from './bookPreview.js';
-
 /**
  * Modules from props file
  * @type {Object<Array>} css - an object literal that contains color value for day and night
@@ -57,8 +56,15 @@ export const renderPreview = () => {
                 /**
                  * Creating instance of BookPreview
                  */
-                const BookToShow = new BookPreview(book)
-                fragment.appendChild(BookToShow);
+                // const BookToShow = new BookPreview(book)
+                // fragment.appendChild(BookToShow);
+                const bookPreview = document.createElement('create-bookpreview');
+                bookPreview.setAttribute('data-preview', book.id);
+                bookPreview.setAttribute('data-title', book.title);
+                bookPreview.setAttribute('data-author', authors[book.author]);
+                bookPreview.setAttribute('data-image', book.image);
+            
+                fragment.appendChild(bookPreview);
             }
             list.appendChild(fragment);
         }
@@ -137,8 +143,15 @@ export const updateBookList = () => {
             const fragment = document.createDocumentFragment();
         
             for (const book of result.slice(0, BOOKS_PER_PAGE)) {
-                const element = new BookPreview(book)
-                fragment.appendChild(element);
+                // // const element = new BookPreview(book)
+                // fragment.appendChild(element);
+                const bookPreview = document.createElement('book-preview');
+                bookPreview.setAttribute('data-preview', book.id);
+                bookPreview.setAttribute('data-title', book.title);
+                bookPreview.setAttribute('data-author', authors[book.author]);
+                bookPreview.setAttribute('data-image', book.image);
+            
+                fragment.appendChild(bookPreview);
             }
         
             list.appendChild(fragment);

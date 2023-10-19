@@ -24,7 +24,6 @@ export class BookPreview extends HTMLElement {
     constructor({id, title, image, author}) {
         super();
         this.attachShadow({ mode: 'open' });
-        
         this.id = id;
         this.title = title;
         this.image = image;
