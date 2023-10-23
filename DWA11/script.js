@@ -32,7 +32,7 @@ const store = createStore(reducer, initialState);
 /**
  * Function to log the state  to the console
  */
-function logState() {
+const logState = () => {
     console.log('State:', store.getState());
 }
 
