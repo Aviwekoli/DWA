@@ -58,6 +58,7 @@ export const renderPreview = () => {
                  */
                 // const BookToShow = new BookPreview(book)
                 // fragment.appendChild(BookToShow);
+                
                 const bookPreview = document.createElement('create-bookpreview');
                 bookPreview.setAttribute('data-preview', book.id);
                 bookPreview.setAttribute('data-title', book.title);

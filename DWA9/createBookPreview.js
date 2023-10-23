@@ -67,24 +67,24 @@ template.innerHTML = `
 
 
 
-        class CreateBookPreview extends HTMLElement {
-            constructor() {
-              super();
-              const root = this.attachShadow({ mode: 'open' });
-              let clone =  template.content.cloneNode(true)
-              root.append(clone)
-            }
-      
-            connectedCallback() {
-              const id = this.getAttribute('data-preview');
-              const title = this.getAttribute('data-title');
-              const author = this.getAttribute('data-author');
-              const image = this.getAttribute('data-image');
-      
-              this.shadowRoot.querySelector('.preview__image').src = image;
-              this.shadowRoot.querySelector('.preview__title').textContent = title;
-              this.shadowRoot.querySelector('.preview__author').textContent = author;
-            }
-          }
-      
-          customElements.define('create-bookpreview', CreateBookPreview);
+class CreateBookPreview extends HTMLElement {
+    constructor() {
+        super();
+        const root = this.attachShadow({ mode: 'open' });
+        let clone =  template.content.cloneNode(true)
+        root.append(clone)
+    }
+
+    connectedCallback() {
+        const id = this.getAttribute('data-preview');
+        const title = this.getAttribute('data-title');
+        const author = this.getAttribute('data-author');
+        const image = this.getAttribute('data-image');
+
+        this.shadowRoot.querySelector('.preview__image').src = image;
+        this.shadowRoot.querySelector('.preview__title').textContent = title;
+        this.shadowRoot.querySelector('.preview__author').textContent = author;
+    }
+    }
+
+    customElements.define('create-bookpreview', CreateBookPreview);
