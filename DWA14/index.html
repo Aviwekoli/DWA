@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tally App using Lit</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/shoelace-autoloader.js"></script>
+    <script src="./tallyApp.js" type="module" defer></script>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100vh;
+        }
+
+        body {
+            margin: 2rem;
+            font-family: Roboto, Arial, Helvetica, sans-serif;
+            height: 100%;
+            background-color: rgb(10, 4, 4);
+            color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <tally-app></tally-app>
+</body>
+</html>
